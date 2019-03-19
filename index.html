@@ -1,0 +1,133 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Simple Design</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <link rel="stylesheet" href="">
+    
+<!-- css -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="fontawesome-free/css/all.css">
+<link rel="stylesheet" href="css/style.css">
+    
+<!-- Jquery -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+<!-- fonts -->
+<link href="https://fonts.googleapis.com/css?family=Nunito:400,600" rel="stylesheet">
+    
+<style>
+   
+
+</style>
+<script>
+    $(document).ready(function(){
+        $('.nav-menu a').hover(
+            function(){
+            $(this).children().css('width', '100%');
+        }, function(){
+            $(this).children().css('width', '0');
+        });
+        $('.mobile-menu').click(function(){
+            $('.side-col').toggle(200);
+        });
+        
+//        $('.side-header').click(function(){
+//            $('.disappear').hide();
+//            $('#home').fadeIn(500);
+//        })
+        
+        $('.nav-menu a, .side-header a').click(function(){
+            var id = $(this).attr('href');
+            $('.disappear').hide();
+            if (window.innerWidth < 767){
+                $('.side-col').hide();
+            } else{
+                $('.side-col').show();
+            }
+            $(id).fadeIn(500);
+        })
+    
+    });
+    
+</script>
+
+</head>
+
+<body>
+    <div class="holder">
+    <div class="header hidden-nav">
+        <div class="header-content mobile-menu"><i style="color:#E6E8E6;margin-left: auto" class="fas fa-chevron-circle-down"></i></div>
+        
+        <div class="header-content" style="margin-left:auto;color:#E88146;"><i class="fab fa-instagram"></i></div><div class="header-content" style="color:#E88146;"><i class="fab fa-facebook-f"></i></div>
+        <div class="header-content" style="color:#E88146;"><i class="far fa-envelope"></i></div>
+        <div class="header-content" style="color:#E88146;"><i class="fab fa-github"></i></div>
+        
+    </div>
+    
+    
+        <div class="body row" style="height:100%">
+            <div class="side-col col-md-3">
+                <div class="side-header featured">
+                    <a href="#home">roger mawer</a>
+                </div>
+                <div class="nav-menu">
+                    <a href="#who">
+                        <p>who</p>
+                    </a>
+                   <a href="#apps">
+                        <p>apps</p>
+                    </a>
+                    <a href="#web">
+                        <p>web</p>
+                    </a>
+  
+                    <a href="#connect">
+                        <p>connect</p>
+                    </a>
+                </div>
+            <div class="connect-icons">
+                <div class="header-content" style="color:#0F3F68;"><i class="fab fa-instagram"></i></div><div class="header-content" style="color:#0F3F68;"><i class="fab fa-facebook-f"></i></div>
+                <div class="header-content" style="color:#0F3F68;"><i class="far fa-envelope"></i></div>
+                <div class="header-content" style="color:#0F3F68;"><i class="fab fa-github"></i></div>
+            </div>
+                
+            </div>
+        
+            <div class="main-col col-md-9">
+                <div id="home" class="disappear" style="display: block"></div>
+                <div id="who" class="disappear">
+                    <div style="padding: 20px">
+                    <h5>Apps</h5>
+                    <a href="/day-calculator/app.html">Date Calculator</a><br>
+                    <a href="/youtube-thumbnail-app">YouTube Thumbnail Grabber</a><br>
+                    <a href="/points-index.html">PVTILND Points</a>
+                    </div>
+      
+                    <div style="padding: 20px">
+                    <h5>Web</h5>
+                    <a href="https://www.pvtilnd.com/">Private Island :: Official Site</a><br>
+                    <a href="https://www.bookgalfromcal.com/">BookGalFromCal :: Online selling</a>
+                    </div>
+      
+                </div>
+                <div id="apps" class="disappear">this is apps. </div>
+                <div id="web" class="disappear">this is web</div>
+                <div id="connect" class="disappear">this is connect</div>
+            </div>
+        </div>
+    </div>
+    
+    
+  <script src="">
+
+</script>
+</body>
+</html>
