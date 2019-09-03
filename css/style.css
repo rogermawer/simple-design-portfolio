@@ -8,7 +8,12 @@
         background-image: url("../img/98160012.JPG");
         background-position: center;
         background-size: cover;
+/*
+        background: linear-gradient(140deg, rgb(253, 95, 28), rgb(15, 84, 161), rgb(218, 217, 212)) 0% 0% / 200% 200%; 
+        animation: 59s ease 0s infinite normal none running CustomAnimation;
+        */
     }
+
     .container{
         padding: 0px 20px 20px 20px
     }
